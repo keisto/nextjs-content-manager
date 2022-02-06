@@ -19,6 +19,10 @@ const ResourceDetail = ({ resource }) => {
       .catch(() => alert("Failed to activate!"));
   }
 
+  if (!resource) {
+    return (<div>loading...</div>);
+  }
+
   return (
     <BaseLayout>
       <div key={resource.id} className="p-6 border rounded hover:bg-gray-100">
